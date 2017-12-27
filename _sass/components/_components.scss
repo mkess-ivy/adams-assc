@@ -1,0 +1,420 @@
+// Preloader
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(/assets/img/Preloader.gif) center no-repeat #fff;
+}
+
+// Back top Icon
+.backtop {
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    z-index: 500;
+
+    i {
+        color: rgba(175,142,27,0.3);
+
+        &:hover {
+            color: rgba(0,0,0,0.7);
+        }
+    }
+}
+
+// Primary Slide
+.primary_slider {
+    height: 60vh;
+    width: 100%;
+    margin-top: 20px;
+
+    @include tablet {
+        height: 75vh;
+    }
+}
+.slide_item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh !important;
+    width: 100%;
+
+    @include tablet {
+        height: 75vh !important;
+    }
+}
+.primary_slide_info {
+    @extend %clearfix;
+    @extend .content_wrapper;
+
+    @include tablet {
+        background: $white;
+        margin-top: -100px !important;
+        padding: 20px 50px !important;
+    }
+    @include desktop {
+        width: 425px !important;
+        margin: -210px 0 50px 100px !important;
+        padding: 20px !important;
+    }
+
+    .primary_slide_title {
+        font-size: 16px;
+        font-weight: $bold;
+        text-transform: uppercase;
+        padding: 20px 0;
+        line-height: 1.2;
+        font-family: $font-beta;
+
+        @include tablet {
+            font-size: 22px;
+        }
+    }
+    .primary_slide_subtitle {
+        display: inline-block;
+        font-family: $font-beta;
+        font-size: 12px;
+        font-weight: $bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        width: 135px;
+
+        @include tablet {
+            font-size: 18px;
+            width: 200px;
+        }
+    }
+    .primary_slide_subtitle_icon {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+.icon_house {
+    width: 30px;
+}
+
+// Info Section
+.info_section {
+    padding-bottom: 0px;
+}
+.info_title {
+    font-family: $font-beta;
+    font-size: 20px;
+    font-weight: $medium;
+    padding-bottom: 20px;
+
+    &:after {
+        @extend %title_divider;
+    }
+
+    @include desktop {
+        font-size: 26px;
+    }
+    @include widescreen {
+        font-size: 30px;
+    }
+}
+.info_list {
+    margin-top: 50px;
+
+    @include desktop {
+        margin-top: 0;
+    }
+
+    li {
+        list-style: initial;
+        margin-bottom: 20px;
+
+        @include laptop {
+            float: left;
+            margin-left: 20px;
+            width: 45%;
+        }
+        @include desktop {
+            font-size: 18px;
+        }
+        @include widescreen {
+            font-size: 20px;
+        }
+    }
+}
+.info_text {
+    @include desktop {
+        width: 85%;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    @include widescreen {
+        font-size: 24px;
+    }
+    a {
+        color: $brown;
+        text-decoration: none;
+        font-weight: $bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.resource_list {
+    @extend .info_list;
+
+    li {
+        list-style: none !important;
+        margin-left: 0 !important;
+
+        a {
+            text-decoration: none;
+            color: $black;
+            font-weight: $bold;
+
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+}
+
+// Call Out
+.call_out {
+    background-color: $darkbrown;
+    color: $white;
+    position: relative;
+    margin-bottom: 35px;
+
+    .call_out_icon {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .call_out_title {
+        color: $white;
+        font-family: $font-beta;
+        font-size: 22px;
+        font-weight: $bold;
+        line-height: 1.2;
+        padding-bottom: 20px;
+
+        @include desktop {
+            font-size: 26px;
+        }
+        @include widescreen {
+            font-size: 30px;
+        }
+    }
+    .call_out_text {
+        line-height: 1.2;
+
+        @include desktop {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+        @include widescreen {
+            font-size: 24px;
+        }
+
+        &.option {
+            @include laptop {
+                width: 80%;
+                max-width: 480px;
+            }
+            @include desktop {
+                max-width: 700px;
+            }
+        }
+    }
+    .call_out_wrapper {
+        @include laptop {
+            margin-left: -70px;
+        }
+        @include desktop {
+            margin-left: -85px;
+        }
+        @include widescreen {
+            width: 875px;
+        }
+    }
+}
+.call_out_secondary_icon {
+    padding-bottom: 25px;
+}
+
+// - Call Out Slider
+.call_out_slider {
+    height: 40vh;
+
+    @include tablet {
+        height: 17vh;
+    }
+    @include desktop {
+        height: 25vh;
+    }
+}
+button.pp2,
+button.nn2 {
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+
+    &:focus {
+        border: transparent;
+        outline: none;
+    }
+}
+.pp2 {
+    bottom: 35px;
+    position: absolute;
+    left: 40px;
+
+    @include small {
+        left: 75px;
+    }
+    @include tablet {
+        left: -10px;
+        bottom: auto;
+        top: 50%;
+    }
+}
+.nn2 {
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+
+    @include small {
+        right: 75px;
+    }
+    @include tablet {
+        right: -10px;
+        bottom: auto;
+        top: 50%;
+    }
+}
+
+// Rights
+.rights_section {
+    margin-top: 50px;
+}
+.rights_single {
+    padding: 20px;
+    outline: 2px solid $brown;
+    margin-bottom: 25px;
+
+    @include laptop {
+        width: 48%;
+    }
+    @include desktop {
+        margin-bottom: 50px;
+    }
+
+    .rights_title {
+        font-family: $font-beta;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 7px;
+
+        @include desktop {
+            font-size: 18px;
+        }
+    }
+    .rights_text {
+        font-size: 14px;
+
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+}
+
+// Misc
+.divider {
+    height: 2px;
+    width: 100%;
+    background: #DACBA3;
+    margin-bottom: 50px;
+}
+
+// Workshops Section
+.workshop_single {
+    margin-bottom: 50px;
+
+    .workshop_date {
+        color: $brown;
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    .workshop_wrapper {
+        border: 2px solid $brown;
+
+        .workshop_image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('/assets/img/workshop_1_mobile.jpg');
+            min-height: 85vh;
+
+            @include tablet {
+                background-image: url('/assets/img/workshop_1.jpg');
+                min-height: 17vh;
+            }
+            @include desktop {
+                min-height: 25vh;
+            }
+        }
+        .workshop_info {
+            padding: 12px;
+
+            @include tablet {
+                padding: 20px;
+            }
+
+            .workshop_title {
+                font-weight: $bold;
+
+                &:after {
+                    @extend %title_divider;
+                }
+            }
+            .workshop_icon_holder {
+                display: inline-block;
+                float: left;
+                margin-right: 15px;
+            }
+            .workshop_icon {
+                width: 17px;
+            }
+            .workshop_text {
+                padding-top: 10px;
+            }
+            .workshop_text_here {
+                display: inline-block;
+                width:85%;
+            }
+            a {
+                text-decoration: none;
+                color: $brown;
+                display: block;
+                width: 125px;
+                margin-left: 30px;
+            }
+            .workshop_btn {
+                border: 2px solid $brown;
+                border-radius: 50px;
+                width: 125px;
+                padding: 5px;
+                text-align: center;
+                margin: 20px 5px 10px 0px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 14px;
+
+                &:hover {
+                    color: $black;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+}

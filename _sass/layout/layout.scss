@@ -1,0 +1,29 @@
+body {
+	-webkit-font-smoothing: antialiased;
+}
+.flex-centered {
+	height: 100%;
+	justify-content: flex-start !important;
+	align-items: center;
+}
+.content_wrapper {
+	padding: 30px;
+	position: relative;
+
+	@include small {
+		padding: 50px;
+	}
+	@include palm {
+		width: 400px;
+		margin: 0 auto;
+	}
+	@include tablet {
+		width: 650px;
+	}
+	@include desktop {
+		width: 850px;
+	}
+	@include widescreen {
+		width: 1000px;
+	}
+}

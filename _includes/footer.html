@@ -1,0 +1,51 @@
+<footer class="content_wrapper">
+    <div class="divider">&nbsp;</div>
+
+    <div class="frow justify-between">
+        <div class="footer_half">
+            {% include components/footer_intro.html %}
+        </div>
+
+        <div class="footer_half footer_section">
+            <div class="footer_title">Connect with us</div>
+
+            {%  include components/footer_team.html
+                team_member1 = "Michelle Webb, Outreach Coordinator"
+                team_member2 = "LaTia Allen, Training Coordinator"
+                team_member3 = "Darlene Adams, CPA"
+            %}
+
+            {%  include components/footer_contact.html
+                telephone = "410.583.5811"
+                fax = "410.583.5812"
+                email = "baltocntyAFHC<span>@adamsconsults.com</span>"
+            %}
+
+            {%  include components/footer_social.html
+                youtube = "http://www.youtube.com/channel/UCypzVfxfNxZB0gv84D6QOng"
+                twitter = "http://www.twitter.com/AdamsAssoc_AFHC"
+                instagram = "http://www.instagram.com/AdamsAssoc_AFHC"
+                facebook = "http://www.facebook.com/Adams-Associates-Affirmative-Fair-Housing-Contractor-for-Baltimore-County-1380790485323641"
+            %}
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+
+<!-- Javascript CDN -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.potato', { duration: 1000});
+    </script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/d476a27cae.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/slick/slick.min.js"></script>
+<!-- Scripts -->
+<script type="text/javascript" src="/js/main.js"></script>

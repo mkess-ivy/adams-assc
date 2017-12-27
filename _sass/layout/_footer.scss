@@ -1,0 +1,82 @@
+.footer_logo {
+    margin: 0 auto 75px;
+    width: 90%;
+
+    @include tablet {
+        width: 250px;
+        margin: 0 0 75px;
+    }
+    @include laptop {
+        width: 200px;
+        margin-bottom: 35px;
+    }
+}
+.footer_title {
+    font-size: 18px;
+    font-weight: $bold;
+    padding-bottom: 7px;
+
+    @include laptop {
+        font-size: 17px;
+    }
+}
+.footer_text {
+    font-size: 14px;
+}
+.footer_section {
+    margin-bottom: 25px;
+
+    @include widescreen {
+        max-width: 300px;
+    }
+}
+.footer_contact {
+    padding-top: 25px;
+    font-size: 14px;
+
+    span {
+        @include laptop {
+            display: block;
+        }
+        @include desktop {
+            display: inline;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            color: $brown;
+        }
+    }
+}
+.footer_social {
+    padding-top: 35px;
+
+    li {
+        display: inline;
+        padding-right: 20px;
+
+        a {
+            color: $black;
+
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+}
+.footer_half {
+    width: 100%;
+
+    @include laptop {
+        width: 45%;
+    }
+}
+footer.content_wrapper {
+    @include laptop {
+        padding-bottom: 7px;
+    }
+}

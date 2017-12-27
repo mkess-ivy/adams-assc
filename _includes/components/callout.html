@@ -1,0 +1,21 @@
+<section class="call_out">
+    <div class="content_wrapper">
+        <div class="call_out_icon">
+            <img src="/assets/img/icon_house_white.png" width="35" />
+        </div>
+        <div class="call_out_slider">
+            {% for thing in site.data.callout %}
+            <div class="call_out_slide">
+                <div class="call_out_title">
+                    {{ thing.title }}
+                </div>
+                <div class="call_out_text">
+                    {{ thing.text }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="pp2"><img src="/assets/img/slide_left_icon.png" width="25" /></button>
+        <button class="nn2"><img src="/assets/img/slide_right_icon.png" width="25" /></button>
+    </div>
+</section>

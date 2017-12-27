@@ -1,0 +1,10 @@
+@import 'helper/variables';
+
+%title_divider {
+    content:'';
+    display: block;
+    background-color: $brown;
+    height: 3px;
+    margin-top: 5px;
+    width: 50px;
+}

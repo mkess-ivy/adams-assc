@@ -1,0 +1,248 @@
+/* - Overlay Responsive Menu */
+#menu-container {}
+.menu {
+	margin: auto;
+	width: 375px;
+
+	@include desktop {
+		margin: 0;
+	}
+}
+.menuButton {
+	background: transparent !important;
+	border: none !important;
+	color: #fff !important;
+	font-size: 48px !important;
+	height: 100% !important;
+	position: relative !important;
+	width: 100% !important;
+	font-weight: lighter;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+
+	@include tablet {
+		font-size: 28px !important;
+	}
+	@include desktop {
+		display: none;
+	}
+}
+.menuButton:active {
+	position: relative;
+	top: 1px;
+}
+.menuButton:hover {
+	-o-transition:.75s;
+    -ms-transition:.75s;
+    -moz-transition:.75s;
+    -webkit-transition:.75s;
+    transition:.75s;
+}
+.menuButton:focus {
+	outline: none;
+}
+.overlay {
+	background-color: rgba(230,79,76,0.97);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 500;
+}
+.overlay nav {
+	position: relative;
+}
+.overlay ul {
+	display: inline-block;
+	list-style: none;
+	margin-left: 20px;
+	padding: 0;
+	position: relative;
+
+	@include tablet {
+		margin-left: 50px;
+	}
+}
+.overlay ul li {
+	margin:0;
+	padding: 0;
+	width: 100%;
+	padding-bottom: 20px;
+}
+.overlay ul li a {
+	color: #fff;
+	font-size: 38px;
+	line-height: 44px;
+	font-weight: bold;
+	text-decoration: none;
+
+	@include small {
+		font-size: 48px;
+		line-height: 54px;
+	}
+
+	@include palm {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	@include tablet {
+		font-size: 70px;
+		line-height: 70px;
+	}
+
+	@include desktop {
+		font-size: 90px;
+		line-height: 80px;
+	}
+}
+.overlay ul li a:hover {
+	color: black;
+}
+.overlay-close {
+	background: url('/assets/img/icon_menu_close.png') no-repeat center center !important;
+	background-size: contain !important;
+	border: none !important;
+	color: transparent !important;
+	height: 35px !important;
+	outline: none;
+	overflow: hidden !important;
+	position: absolute !important;
+	right: 35px !important;
+	text-indent: 200% !important;
+	top: 10px !important;
+	width: 25px !important;
+	z-index: 100 !important;
+
+	@include tablet {
+		right: 57px !important;
+	}
+}
+.overlay-data {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.overlay-open {
+	opacity: 1;
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	visibility: visible;
+}
+.menu-content {
+	bottom: 40px;
+	font-size: 19px;
+	font-weight: bold;
+	opacity: 0.7;
+	position: fixed;
+	width: 88% !important;
+
+	@include tablet {
+		width: 40% !important;
+	}
+
+	@include desktop {
+		width: 30% !important;
+	}
+}
+
+// Logo
+.logo {
+	text-align: center;
+	width: 75%;
+	margin: auto;
+
+	@include desktop {
+		width: 250px;
+		margin: 0;
+	}
+}
+.logo_size {
+	width: 250px;
+}
+
+// Menu Title
+.menu_title {
+	letter-spacing: 2px;
+	text-align: center;
+
+	@include desktop {
+		display: none;
+	}
+}
+
+// Menu List
+.menu_list {
+	margin: 25px 0;
+	text-align: center;
+	display: none;
+
+	@include desktop {
+		display: block;
+		text-align: right;
+	}
+
+	ul .menu_header {
+		font-family: $font-beta;
+		font-size: 18px;
+		font-weight: $bold;
+		margin-bottom: 10px;
+
+		@include desktop {
+			margin-bottom: 0;
+			font-size: 22px;
+			display: inline;
+			margin-left: 30px;
+		}
+
+		a {
+			color: $black;
+			text-decoration: none;
+
+			&:hover {
+				color: $brown;
+			}
+
+			img {
+				display: none;
+
+				@include desktop {
+					display: inline-block;
+				}
+			}
+		}
+
+		.sub_menu li {
+			font-size: 17px;
+			font-weight: $medium;
+			padding-bottom: 7px;
+
+			&:first-child {
+				padding-top: 15px;
+			}
+		}
+	}
+	ul .menu_header span {
+		display: none;
+		@include desktop {
+			display: inline-block;
+		}
+	}
+	&.open_menu {
+		display: block;
+	}
+}
+.sub_menu {
+	@include desktop {
+		display: none;
+	}
+}
+.site_header {
+	margin: 30px;
+
+	@include widescreen {
+		margin: 20px 50px;
+	}
+}

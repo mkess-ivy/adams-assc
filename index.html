@@ -1,0 +1,54 @@
+---
+layout: primary
+---
+
+{%  include components/primary_slider.html
+    slide1 = "/assets/img/slide_woman_child.jpg"
+    slide2 = "/assets/img/slide_disability.jpg"
+    slide3 = "/assets/img/slide_home.jpg"
+%}
+
+<section class="content_wrapper">
+    {%  include components/info_section.html
+        title = "What is Fair Housing?"
+        text = "Fair housing is the right to choose housing free from unlawful discrimination. Federal, state and local fair housing laws protect people from discrimination in housing transactions such as rentals, sales, lending, and insurance."
+    %}
+</section>
+
+{%  include components/callout.html %}
+
+<section class="content_wrapper">
+    {%  include components/info_section.html
+        title = "Residents have Rights and other Housing Related Matters?"
+        text = "Fair housing laws protect all individuals seeking housing, including renters, homebuyers, persons obtaining a mortgage or homeowners insurance, and others."
+    %}
+
+    <div class="rights_section">
+        <div class="frow justify-between">
+            {% for right in site.data.resident_rights %}
+            <div class="rights_single potato">
+                <div class="rights_title">{{ right.title }}</div>
+                <div class="rights_text">{{ right.text }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include components/fairhousing_callout.html %}
+
+<section class="content_wrapper">
+    <div class="info_section potato">
+        <div class="info_title">Fair Housing Discrimination</div>
+        <div class="info_text">
+            Being knowledgeable of discrimination is a proactive way of preventing or acknowledging it when it happens.  Check out some signs of discrimination below.  Learn how to get into your first home at our <a href="/awareness">workshops</a>.
+        </div>
+        <ul class="info_list">
+            <div class="frow justify-between">
+                {% for thing in site.data.discrimination_signs %}
+                <li class="potato">{{ thing.sign }}</li>
+                {% endfor %}
+            </div>
+        </ul>
+    </div>
+</section>
