@@ -23,7 +23,7 @@ layout: primary
         text = "Fair housing laws protect all individuals seeking housing, including renters, homebuyers, persons obtaining a mortgage or homeowners insurance, and others."
     %}
 
-    <div class="rights_section">
+    <div class="rights_section info_text_wrapper">
         <div class="frow justify-between">
             {% for right in site.data.resident_rights %}
             <div class="rights_single potato">
@@ -39,16 +39,19 @@ layout: primary
 
 <section class="content_wrapper">
     <div class="info_section potato">
+        <div class="info_divider animation-element bounce-up"></div>
         <div class="info_title">Fair Housing Discrimination</div>
-        <div class="info_text">
-            Being knowledgeable of discrimination is a proactive way of preventing or acknowledging it when it happens.  Check out some signs of discrimination below.  Learn how to get into your first home at our <a href="/awareness/">workshops</a>.
-        </div>
-        <ul class="info_list">
-            <div class="frow justify-between">
-                {% for thing in site.data.discrimination_signs %}
-                <li class="potato">{{ thing.sign }}</li>
-                {% endfor %}
+        <div class="info_text_wrapper">
+            <div class="info_text">
+                Being knowledgeable of discrimination is a proactive way of preventing or acknowledging it when it happens.  Check out some signs of discrimination below.  Learn how to get into your first home at our <a href="/awareness/">workshops</a>.
             </div>
-        </ul>
+            <ul class="info_list">
+                <div class="frow justify-between">
+                    {% for thing in site.data.discrimination_signs %}
+                    <li class="potato">{{ thing.sign }}</li>
+                    {% endfor %}
+                </div>
+            </ul>
+        </div>
     </div>
 </section>

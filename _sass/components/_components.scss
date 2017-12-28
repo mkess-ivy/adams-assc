@@ -16,8 +16,13 @@
     right: 15px;
     z-index: 500;
 
+    @include tv {
+        bottom: 10px;
+        right: 35px;
+    }
+
     i {
-        color: rgba(175,142,27,0.3);
+        color: rgba(175,142,27,0.7);
 
         &:hover {
             color: rgba(0,0,0,0.7);
@@ -96,9 +101,40 @@
     width: 30px;
 }
 
+// bounce up animation
+
+.bounce-up {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.bounce-up.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
 // Info Section
 .info_section {
-    padding-bottom: 0px;
+    padding-bottom: 50px;
+    position: relative;
+
+    @include desktop {
+        padding-bottom: 0;
+    }
 }
 .info_title {
     font-family: $font-beta;
@@ -112,9 +148,21 @@
 
     @include desktop {
         font-size: 26px;
+        width: 50%;
+        padding-bottom: 50px;
     }
     @include widescreen {
         font-size: 30px;
+    }
+}
+.info_divider {
+    @include desktop {
+        background: $brown;
+        height: 100px;
+        margin-left: -75px;
+        margin-top: -90px;
+        position: absolute;
+        width: 2px;
     }
 }
 .info_list {
@@ -158,6 +206,11 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+.info_text_wrapper {
+    @include desktop {
+        margin-left: 3.5em;
     }
 }
 .resource_list {
@@ -244,7 +297,15 @@
 
 // - Call Out Slider
 .call_out_slider {
-    height: 40vh;
+    height: 75vh;
+
+    @include tiny {
+        height: 55vh;
+    }
+
+    @include small {
+        height: 45vh;
+    }
 
     @include tablet {
         height: 17vh;

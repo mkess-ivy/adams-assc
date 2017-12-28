@@ -22,6 +22,7 @@ body {
 	}
 	@include desktop {
 		width: 850px;
+		padding: 100px 50px 50px;
 	}
 	@include widescreen {
 		width: 1000px;

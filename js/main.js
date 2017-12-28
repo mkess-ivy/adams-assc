@@ -14,17 +14,6 @@ $(document).ready(function(){
         });
     });
 
-    // Main Overlay Menu Functionality
-    // $("#overlay-menu").click(function() {
-    //     $(".overlay").addClass("overlay-open");
-    //     $('body').addClass("noScroll");
-    // });
-    //
-	// $(".overlay-close").click(function() {
-    //     $(".overlay").removeClass("overlay-open");
-    //     $('body').removeClass("noScroll");
-    // });
-
     // Site Preloader
     $(window).load(function(){
 	    $('.se-pre-con').fadeOut('slow',function(){$(this).remove();});

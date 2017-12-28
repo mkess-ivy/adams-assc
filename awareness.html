@@ -3,7 +3,6 @@ layout: primary
 title: Awareness
 permalink: /awareness/
 ---
-
 {%  include components/primary_slider.html
     slide1 = "/assets/img/slide_house.jpg"
     slide2 = "/assets/img/slide_keys.jpg"
@@ -22,7 +21,7 @@ permalink: /awareness/
     %}
 
     {% for item in site.data.workshops %}
-    <div class="workshop_single">
+    <div class="workshop_single potato" id="workshops">
         <div class="workshop_date">{{ item.date }}</div>
         <div class="workshop_wrapper">
             <div class="workshop_image"></div>
@@ -41,7 +40,7 @@ permalink: /awareness/
                 <div class="workshop_text">
                     <div class="workshop_icon_holder"><img src="/assets/img/icon_note.png"  class="workshop_icon" /></div> <div class="workshop_text_here">{{ item.text }}</div>
                 </div>
-                <a href="mailto:baltocntyAFHC@adamsconsults.com?subject=Email%20Subject"><div class="workshop_btn">
+                <a href="mailto:baltocntyAFHC@adamsconsults.com?subject=Interest%20in%20Fair%20Housing%20Workshop"><div class="workshop_btn">
                     sign up
                 </div></a>
             </div>
@@ -53,17 +52,20 @@ permalink: /awareness/
 {% include components/fairhousing_callout.html %}
 
 <section class="content_wrapper">
-    <div class="info_section">
+    <div class="info_section potato">
+        <div class="info_divider animation-element bounce-up"></div>
         <div class="info_title">Resources</div>
-        <div class="info_text">
-            Below you will find a list of resources that help with knowing your rights.
-        </div>
-        <ul class="resource_list">
-            <div class="frow justify-between">
-                {% for thing in site.data.resources %}
-                <li class="potato"><a href="{{ thing.url }}" target="_blank">{{ thing.resource }}</a></li>
-                {% endfor %}
+        <div class="info_text_wrapper">
+            <div class="info_text">
+                Below you will find a list of resources that help with knowing your rights.
             </div>
-        </ul>
+            <ul class="resource_list">
+                <div class="frow justify-between">
+                    {% for thing in site.data.resources %}
+                    <li class="potato"><a href="{{ thing.url }}" target="_blank">{{ thing.resource }}</a></li>
+                    {% endfor %}
+                </div>
+            </ul>
+        </div>
     </div>
 </section>

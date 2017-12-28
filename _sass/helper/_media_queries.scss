@@ -1,3 +1,4 @@
+$on-tiny            : 375px;
 $on-small           : 400px;
 $on-palm            : 500px;
 $on-tablet          : 750px;
@@ -5,10 +6,14 @@ $on-laptop          : 900px;
 $on-desktop         : 1024px;
 $on-widescreen      : 1366px;
 $on-tv              : 1450px;
-$on-tv-1650         : 1650px;
-$on-tv-1920         : 1920px;
 
 // Media Query Mixins
+
+@mixin tiny {
+  @media screen and (min-width: #{$on-tiny}) {
+    @content;
+  }
+}
 
 @mixin small {
   @media screen and (min-width: #{$on-small}) {
@@ -48,18 +53,6 @@ $on-tv-1920         : 1920px;
 
 @mixin tv {
   @media screen and (min-width: #{$on-tv}) {
-    @content;
-  }
-}
-
-@mixin tv-1650 {
-  @media screen and (min-width: #{$on-tv-1650}) {
-    @content;
-  }
-}
-
-@mixin tv-1920 {
-  @media screen and (min-width: #{$on-tv-1920}) {
     @content;
   }
 }
